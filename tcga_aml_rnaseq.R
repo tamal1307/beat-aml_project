@@ -1,3 +1,4 @@
+kuch vbi likh
 #setting working directory
 setwd("A:/kiran/tcga_laml_rnaseq/tcga_laml_rnaseq/")
 #load("A:/kiran/tcga_laml_rnaseq/tcga_laml_rnaseq/renv.RData")
