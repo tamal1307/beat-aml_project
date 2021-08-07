@@ -1,0 +1,33 @@
+#first download the necessary kart file from db gap data.
+#then use the sra tool kit to download the file into home folder
+#then move the file from home to desired directory
+#decrypt the file using repository key
+#use the file as necessary
+
+
+## installing sra tool kit using anyone of the following [ubuntu 20 doesn't suport current sra tool kit version] 
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/n/ncbi-vdb/libncbi-vdb2_2.9.3+dfsg-2_amd64.deb
+
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/n/ncbi-vdb/libncbi-wvdb2_2.9.3+dfsg-2_amd64.deb
+
+wget http://old-releases.ubuntu.com/ubuntu/pool/universe/s/sra-sdk/sra-toolkit_2.9.3+dfsg-1build2_amd64.deb
+
+#then install using fron the directory where the file is stored
+sudo apt-get install ./libncbi-vdb2_2.9.3+dfsg-2_amd64.deb
+
+[***the other files also can be installed using proper names after install function ]
+
+##importing repository key 
+vdb-config --import repo_key.ngc
+
+## Downloading the data from dbgapusing kart file [.krt] and repository key [.ngc]
+prefetch repo_key.ngc cart_prj24543_202108060719.krt 
+
+##decrypting the ncbi enc file using repository key [.ngc file] and decrypt function from bin directory of toolkit
+/mnt/a/kiran/beat_aml/sratoolkit.2.11.0-ubuntu64/bin/vdb-decrypt --ngc repo_key.ngc phs000424.v8.pht002743.v8.p2.GTEx_Sample_Attributes.var_report.xml.ncbi_enc 
+
+## going to ncbi folder in working directory
+cd ~/ncbi 
+
+##move downloaded files from home folder to destination
+mv phs000424.v8.pht002743.v8.p2.GTEx_Sample_Attributes.var_report.xml.ncbi_enc /mnt/a/kiran/beat_aml
