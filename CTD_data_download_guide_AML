@@ -1,0 +1,10 @@
+#to access BEAT AML data of oregano university follow the steps.
+
+1. go to CTD portal
+https://ocg.cancer.gov/ctd2-data-project/oregon-health-and-science-university-%E2%80%93-1-functional-genomic
+
+2. click on raw or analysed data
+https://ctd2-data.nci.nih.gov/Public/OHSU-1/BeatAML_Waves1_2/
+
+3. Download the files into a folder, properly labled
+unzip the files to obtain drug response data.
