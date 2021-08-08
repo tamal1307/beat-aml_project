@@ -24,15 +24,14 @@ vdb-config --import repo_key.ngc
 ## Downloading the data from dbgapusing kart file [.krt] and repository key [.ngc]
 prefetch repo_key.ngc cart_prj24543_202108060719.krt 
 
-##decrypting the ncbi enc file using repository key [.ngc file] and decrypt function from bin directory of toolkit
-/mnt/a/kiran/beat_aml/sratoolkit.2.11.0-ubuntu64/bin/vdb-decrypt --ngc repo_key.ngc phs000424.v8.pht002743.v8.p2.GTEx_Sample_Attributes.var_report.xml.ncbi_enc 
-
 ## going to ncbi folder in working directory
-cd ~/ncbi 
+cd /home/forts/ncbi/dbGaP-24543/files	
 
 ##move downloaded files from home folder to destination
-mv phs000424.v8.pht002743.v8.p2.GTEx_Sample_Attributes.var_report.xml.ncbi_enc /mnt/a/kiran/beat_aml
+mv *.ncbi_enc /mnt/a/kiran/beat_aml
 
+##decrypting the ncbi enc file using repository key [.ngc file] and decrypt function from bin directory of toolkit
+/mnt/a/kiran/beat_aml/sratoolkit.2.10.8-ubuntu64/bin/vdb-decrypt --ngc repo_key.ngc phs000424.v8.pht002743.v8.p2.GTEx_Sample_Attributes.var_report.xml.ncbi_enc 
 
 ##remove .lock files from ncbi directory before new download
 cd /home/forts/ncbi/dbGaP-24543/files
