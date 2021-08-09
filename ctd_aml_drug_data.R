@@ -25,7 +25,7 @@ which(colnames(trt.resp)== 'Imatinib')
 a= c(1,48)
 imtnb_trt_rsp= trt.resp[,a]
 imtnb_trt_rsp= as.data.frame(imtnb_trt_rsp, stringsAsFactors = T)
-plot(imtnb_trt_rsp$Imatinib)
+plot(imtnb_trt_rsp$Imatinib, col= c('black', 'red', 'dark green'))
 
 #plotting AUC and IC50
 hist(imatinib.drg.resp$auc, main= 'auc for Imatinib treatment accross patients',
