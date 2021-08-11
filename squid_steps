@@ -1,0 +1,2 @@
+#sort the bam file with help of samtools
+samtools sort bam_file.bam -o newfile.bam
