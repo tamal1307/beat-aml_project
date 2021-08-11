@@ -1,2 +1,6 @@
 #sort the bam file with help of samtools
 samtools sort bam_file.bam -o newfile.bam
+
+#using squid tool 
+./squid -b srted_bam_file.bam -c chimeric_bam_file.bam -o output_file_name
+
