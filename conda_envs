@@ -1,0 +1,20 @@
+#creating conda environments
+conda create -n name_env
+conda activate name_env
+
+#** now the prompt will look like this
+(name_env) [name of host]$
+
+#to install squid
+conda install -c bioconda squid
+
+### the squid is only installed in the name_env environment
+
+#to deactivate the environment
+conda deactivate
+
+#** now the prompt will look like this
+[name of host]$
+
+#installing gdc data transfer tool inside squid environment
+conda install -c bioconda gdc-client

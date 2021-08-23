@@ -5,5 +5,5 @@ samtools sort bam_file.bam -o newfile.bam
 
 #the sorted bam file and the chimeric bam file along with the squid qxecution file have to be placed into the same folder
 #using squid tool 
-./squid -b srted_bam_file.bam -c chimeric_bam_file.bam -o output_file_name
+./squid -b sorted_bam_file.bam -c chimeric_bam_file.bam -o output_file_name
 
