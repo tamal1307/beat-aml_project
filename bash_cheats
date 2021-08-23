@@ -1,0 +1,8 @@
+#opening presistant terminal
+screen 
+
+#minimising the persistant terminal
+ctrl+a+d
+
+#going back to the persistant terminal
+screepn -r name_of_screen
