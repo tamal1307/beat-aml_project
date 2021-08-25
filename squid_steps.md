@@ -18,10 +18,10 @@ samtools sort -@ 8 -m 4G bam_file.bam -o sorted_bam_file.bam
 #using squid tool
 squid -b sorted_bam_file.bam -c chimeric_bam_file.bam -o output_file_of_squid
 ````
-#download the **AnnotateSQUIDOutput.py** file from squid repository
+#download the **AnnotateSQUIDOutput.py** file from https://github.com/Kingsford-Group/squid/tree/master/utils
 #download the **gtf file** from https://www.gencodegenes.org/human/
 
 ```bash
 #run the code to obtain annotated fusion gene list
-python AnnotateSQUIDOutput.py --genesymbol <gencode.v38.annotation.gtf> <output_file_of_squid> <fusion_gene_list>
+python AnnotateSQUIDOutput.py <gencode.v38.annotation.gtf> <output_file_of_squid> <fusion_gene_list>
 ```
