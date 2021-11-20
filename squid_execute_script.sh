@@ -1,0 +1,1 @@
+ls -d */ | xargs -I {} bash -c "cd '{}' && squid -b sorted_genomic.gdc_realn.bam -c *chimeric.gdc_realn.bam -o output_file_of_squid"

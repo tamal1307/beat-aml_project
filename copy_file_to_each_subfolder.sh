@@ -1,0 +1,1 @@
+for d in */; do cp desired_file_to_copy "$d"; done
