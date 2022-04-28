@@ -2,4 +2,4 @@ i. Need to have the gdc client tool in the same folder
 ii. Downlaod token from tcga website using log in credentials -> click user name -> download token
 
 #DOWNLOAD DATA FROM TCGA
-./gdc-client download -m manifest.txt -t token.txt
+./gdc-client download -m manifest.txt -t token.txt -n 25
